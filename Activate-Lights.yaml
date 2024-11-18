@@ -23,3 +23,9 @@ blueprint:
         entity:
           filter:
             domain: light
+    set_time:
+      name: Set Time
+      day:
+        time:
+      night:
+        time:
