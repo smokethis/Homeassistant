@@ -21,7 +21,6 @@ blueprint:
           lights_on_trigger:
           name: Lights on trigger
           description: Select entity(ies) to trigger this automation
-          default: []
           selector:
             entity:
               filter:
@@ -30,11 +29,11 @@ blueprint:
               multiple: true
     lights_config:
       input:
+      name: Lights Config
+      icon: mdi:lightbulb-outline
         all_lights:
           name: All Lights
           description: Select all lights to control with this automation
-          icon: mdi:lightbulb-outline
-          default: []
           selector:
             target:
               entity:
