@@ -17,15 +17,13 @@ blueprint:
       description: Select daytime lights to control with this automation
       selector:
         area:
-          filter:
-            domain: light
+          domain: light
     night_lights:
       name: Nighttime Lights
       description: Select nighttime lights to control with this automation
       selector:
         area:
-          filter:
-            domain: light
+          domain: light
     set_times:
       name: Set Times
       input:
