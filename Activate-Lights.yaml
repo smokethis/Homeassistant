@@ -23,9 +23,11 @@ blueprint:
         entity:
           filter:
             domain: light
-    set_time:
-      name: Set Time
-      day:
-        time:
-      night:
-        time:
+    day_time:
+      name: Set Day Time
+      time:
+        default: 05:30:00
+    night_time:
+      name: Set Night Time
+      time:
+        default: 20:30:00
