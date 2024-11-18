@@ -25,11 +25,13 @@ blueprint:
         entity:
           filter:
             domain: light
-    day_time:
-      name: Set Day Time
-      selector:
-        time:
-    night_time:
-      name: Set Night Time
-      selector:
-        time:
+    set_times:
+      name: Set Times
+      input:
+        day_time:
+          selector:
+            time:
+      input:
+        night_time:
+          selector:
+            time:
