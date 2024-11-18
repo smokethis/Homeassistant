@@ -12,7 +12,9 @@ blueprint:
     lights_config:
       name: Lights Config
       description: Select all lights to control with this automation
-      selector:
-        target:
-          entity:
-            domain: light
+      all_lights:
+        name: Shit
+        selector:
+          target:
+            entity:
+              domain: light
