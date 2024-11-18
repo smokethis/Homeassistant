@@ -18,14 +18,14 @@ blueprint:
       name: Trigger
       icon: mdi:cog-outline
         lights_on_trigger:
-        name: Lights on trigger
-        description: Select entity(ies) to trigger this automation
-        selector:
-          entity:
-            filter:
-              domain:
-                - binary_sensor
-              multiple: true
+          name: Lights on trigger
+          description: Select entity(ies) to trigger this automation
+          selector:
+            entity:
+              filter:
+                domain:
+                  - binary_sensor
+                multiple: true
     lights_config:
       name: Lights Config
       icon: mdi:lightbulb-outline
