@@ -2,7 +2,7 @@ blueprint:
   name: Activate Lights, Colour and Dim
   domain: automation
   input:
-    triggers:
+    trigger:
       name: Trigger
       icon: mdi:cog-outline
       description: Select entity(ies) to trigger this automation
