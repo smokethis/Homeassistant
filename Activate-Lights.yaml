@@ -14,20 +14,19 @@ blueprint:
             domain: binary_sensor
     set_lights:
       name: Choose Lights
-      day_lights:
-        name: Daytime Lights
-        input:
-          selector:
-            area:
-              entity:
-                domain: light
-      night_lights:
-        name: Nighttime Lights
-        input:
-          selector:
-            area:
-              entity:
-                domain: light
+      input:
+        day_lights:
+          name: Daytime Lights
+            selector:
+              area:
+                entity:
+                  domain: light
+        night_lights:
+          name: Nighttime Lights
+            selector:
+              area:
+                entity:
+                  domain: light
     set_times:
       name: Set Times
       input:
