@@ -8,10 +8,10 @@ blueprint:
       name: Trigger
       description: Select entity(ies) to trigger this automation
       selector:
-        entity:
+        device:
           multiple: true
-          filter:
-            domain: binary_sensor
+          entity:
+            integration: zha
     set_lights:
       name: Choose Lights
       input:
