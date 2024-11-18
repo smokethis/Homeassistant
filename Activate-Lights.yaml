@@ -15,23 +15,22 @@ blueprint:
     set_lights:
       name: Choose Lights
       description: Select the area which should be used to control lighting
-      input:
-        day_lights:
-          name: Daytime Lights
-          description: Select daytime lights
-          input:
-            selector:
-              area:
-                entity:
-                  domain: light
-        night_lights:
-          name: Nighttime Lights
-          description: Select nighttime lights
-          input:
-            selector:
-              area:
-                entity:
-                  domain: light
+      day_lights:
+        name: Daytime Lights
+        description: Select daytime lights
+        input:
+          selector:
+            area:
+              entity:
+                domain: light
+      night_lights:
+        name: Nighttime Lights
+        description: Select nighttime lights
+        input:
+          selector:
+            area:
+              entity:
+                domain: light
     set_times:
       name: Set Times
       input:
