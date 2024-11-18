@@ -31,6 +31,8 @@ blueprint:
                 domain: light
     set_times:
       name: Set Times
+      description: Defaults to daytime starting at 05:30 and finishing at 20:30
+      collapsed: true
       input:
         day_time:
           name: Daytime start
