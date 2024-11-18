@@ -27,7 +27,9 @@ blueprint:
             domain: light
     day_time:
       name: Set Day Time
-      time:
+      selector:
+        time:
     night_time:
       name: Set Night Time
-      time:
+      selector:
+        time:
