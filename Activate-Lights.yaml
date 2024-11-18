@@ -13,32 +13,35 @@ blueprint:
           filter:
             domain: binary_sensor
     set_lights:
-      name: Choose lights
+      name: Choose Lights
       description: Select the area which should be used to control lighting
-      day_lights:
-        name: Daytime Lights
-        description: Select daytime lights
-        input:
-          selector:
-            area:
-              entity:
-                domain: light
-      night_lights:
-        name: Nighttime Lights
-        description: Select nighttime lights
-        input:
-          selector:
-            area:
-              entity:
-                domain: light
+      input:
+        day_lights:
+          name: Daytime Lights
+          description: Select daytime lights
+          input:
+            selector:
+              area:
+                entity:
+                  domain: light
+        night_lights:
+          name: Nighttime Lights
+          description: Select nighttime lights
+          input:
+            selector:
+              area:
+                entity:
+                  domain: light
     set_times:
       name: Set Times
       input:
         day_time:
           name: Daytime start
+          default: 05:30:00
           selector:
             time:
         night_time:
           name: Nighttime start
+          default: 20:30:00
           selector:
             time:
