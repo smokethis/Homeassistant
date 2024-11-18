@@ -20,8 +20,8 @@ blueprint:
       icon: mdi:cog-outline
       input:
           lights_on_trigger:
-          name: Lights on trigger
-          description: Select entity(ies) to trigger this automation.
+          name: "Lights on trigger"
+          description: "Select entity(ies) to trigger this automation"
           default: []
           selector:
             entity:
@@ -33,8 +33,8 @@ blueprint:
     lights_config:
       input:
         all_lights:
-          name: All Lights
-          description: Select all lights to control with this automation.
+          name: "All Lights"
+          description: "Select all lights to control with this automation"
           icon: mdi:lightbulb-outline
           default: []
           selector:
@@ -43,8 +43,8 @@ blueprint:
                 domain:
                   - light
         night_lights:
-          name: Night Light
-          description: Select light(s) to only activate at nighttime.
+          name: "Night Light"
+          description: "Select light(s) to only activate at nighttime"
           icon: mdi:lightbulb-night-outline
           default: []
           selector:
@@ -56,13 +56,13 @@ blueprint:
       name: "Select Nighttime"
       input:
         nighttime_start:
-          name: Nighttime start
-          description: Set time for nighttime to begin.
+          name: "Nighttime start"
+          description: "Set time for nighttime to begin"
           default: "20:30:00"
           time:
         nighttime_finish:
-          name: Nighttime finish
-          description: Set time for nighttime to finish.
+          name: "Nighttime finish"
+          description: "Set time for nighttime to finish"
           default: "05:30:00"
           time:
 
