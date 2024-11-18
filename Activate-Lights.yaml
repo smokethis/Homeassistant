@@ -16,6 +16,7 @@ blueprint:
       icon: mdi:lightbulb-outline
       description: Select all lights to control with this automation
       selector:
-        target:
-          entity:
+        entity:
+          filter:
             domain: light
+            multiple: true
