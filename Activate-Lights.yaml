@@ -49,7 +49,7 @@ blueprint:
       name: Set Colour Temperature
       collapsed: true
       input:
-        min_color_temp:
+        min_colour_temp:
           name: Coolest Colour Temperature
           description: The most blue colour your bulbs will be set to
           default: 4000
@@ -57,8 +57,8 @@ blueprint:
             color_temp:
               min: 1500
               max: 7000
-            unit: kelvin
-        max_color_temp:
+              unit: kelvin
+        max_colour_temp:
           name: Warmest Colour Temperature
           description: The most yellow colour your bulbs will be set to
           default: 2202
