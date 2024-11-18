@@ -45,3 +45,47 @@ blueprint:
           default: 20:30:00
           selector:
             time:
+    set_colour:
+      name: Set Colour Temperature
+      collapsed: true
+      input:
+        min_color_temp:
+          name: Coolest Colour Temperature
+          description: The most blue colour your bulbs will be set to
+          default: 4000
+          selector:
+            color_temp:
+              min: 1500
+              max: 7000
+            unit: kelvin
+        max_color_temp:
+          name: Warmest Colour Temperature
+          description: The most yellow colour your bulbs will be set to
+          default: 2202
+          selector:
+            color_temp:
+              min: 1500
+              max: 7000
+              unit: kelvin
+    brightness:
+      name: Brightness
+      collapsed: true
+      input:
+        daytime_brightness:
+          name: Daytime Brightness
+          description: The brightness to set bulbs to during the day
+          default: 100
+          selector:
+            number:
+              min: 0
+              max: 100
+              mode: slider
+        nighttime_brightness:
+          name: Nighttime Brightness
+          description: The brightness to set bulbs to at night
+          default: 5
+          selector:
+            number:
+              min: 0
+              max: 100
+              mode: slider
