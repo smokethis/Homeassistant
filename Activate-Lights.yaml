@@ -33,7 +33,6 @@ blueprint:
           name: Daytime start
           selector:
             time:
-      input:
         night_time:
           name: Nighttime start
           selector:
