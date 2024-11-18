@@ -23,8 +23,7 @@ blueprint:
           selector:
             entity:
               filter:
-                domain:
-                  - binary_sensor
+                domain: binary_sensor
                 multiple: true
     lights_config:
       name: Lights Config
@@ -35,5 +34,4 @@ blueprint:
           selector:
             target:
               entity:
-                domain:
-                  - light
+                domain: light
