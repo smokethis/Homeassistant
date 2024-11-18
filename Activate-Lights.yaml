@@ -18,13 +18,13 @@ blueprint:
         day_lights:
           name: Daytime Lights
           selector:
-            area:
+            target:
               entity:
                 domain: light
         night_lights:
           name: Nighttime Lights
           selector:
-            area:
+            target:
               entity:
                 domain: light
     set_times:
