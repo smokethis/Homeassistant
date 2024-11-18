@@ -17,16 +17,16 @@ blueprint:
       input:
         day_lights:
           name: Daytime Lights
-            selector:
-              area:
-                entity:
-                  domain: light
+          selector:
+            area:
+              entity:
+                domain: light
         night_lights:
           name: Nighttime Lights
-            selector:
-              area:
-                entity:
-                  domain: light
+          selector:
+            area:
+              entity:
+                domain: light
     set_times:
       name: Set Times
       input:
