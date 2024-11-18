@@ -11,27 +11,30 @@ blueprint:
         entity:
           filter:
             domain: binary_sensor
+      multiple: true
     day_lights:
       name: Daytime Lights
       description: Select daytime lights to control with this automation
       selector:
-        entity:
+        area:
           filter:
             domain: light
     night_lights:
       name: Nighttime Lights
       description: Select nighttime lights to control with this automation
       selector:
-        entity:
+        area:
           filter:
             domain: light
     set_times:
       name: Set Times
       input:
         day_time:
+          name: Daytime start
           selector:
             time:
       input:
         night_time:
+          name: Nighttime start
           selector:
             time:
