@@ -14,10 +14,8 @@ blueprint:
             domain: binary_sensor
     set_lights:
       name: Choose Lights
-      description: Select the area which should be used to control lighting
       day_lights:
         name: Daytime Lights
-        description: Select daytime lights
         input:
           selector:
             area:
@@ -25,7 +23,6 @@ blueprint:
                 domain: light
       night_lights:
         name: Nighttime Lights
-        description: Select nighttime lights
         input:
           selector:
             area:
