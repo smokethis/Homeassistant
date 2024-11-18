@@ -9,12 +9,17 @@ blueprint:
         entity:
           filter:
             domain: binary_sensor
-    lights_config:
-      name: Lights Config
-      description: Select all lights to control with this automation
-      all_lights:
-        name: Shit
-        selector:
-          target:
-            entity:
-              domain: light
+    day_lights:
+      name: Daytime Lights
+      description: Select daytime lights to control with this automation
+      selector:
+        entity:
+          filter:
+            domain: light
+    night_lights:
+      name: Nighttime Lights
+      description: Select nighttime lights to control with this automation
+      selector:
+        entity:
+          filter:
+            domain: light
