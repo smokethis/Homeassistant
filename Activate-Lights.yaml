@@ -35,9 +35,8 @@ blueprint:
         all_lights:
           name: All Lights
           description: Select all lights to control with this automation
-          input:
-            selector:
-              target:
-                entity:
-                  domain:
-                    - light
+          selector:
+            target:
+              entity:
+                domain:
+                  - light
