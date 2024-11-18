@@ -17,12 +17,14 @@ blueprint:
       input:
         day_lights:
           name: Daytime Lights
+          description: Select the lights to switch on during the day
           selector:
             target:
               entity:
                 domain: light
         night_lights:
           name: Nighttime Lights
+          description: Select the lights to swtich on during the night
           selector:
             target:
               entity:
@@ -32,11 +34,13 @@ blueprint:
       input:
         day_time:
           name: Daytime start
+          description: Choose when daytime begins
           default: 05:30:00
           selector:
             time:
         night_time:
           name: Nighttime start
+          description: Choose when nighttime begins
           default: 20:30:00
           selector:
             time:
