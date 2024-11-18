@@ -10,8 +10,9 @@ blueprint:
       selector:
         device:
           multiple: true
-          entity:
-            integration: zha
+          filter:
+            model: TRADFRI remote control by IKEA of Sweden
+
     set_lights:
       name: Choose Lights
       input:
