@@ -1,17 +1,5 @@
 blueprint:
   name: Activate Lights, Colour and Dim
-  description: >
-    # 💡 Activate Lights, set colour temperature according to sun's position and set on level depending on time-of-day.
-    
-    **Version: 0.1**
-    
-    <details>
-    <summary><b>A summary:</b> Hi this is a thing</summary>
-      
-      - **Trigger:**
-        - Some words.
-        - Some more words.
-    </details>
   domain: automation
   input:
     triggers:
