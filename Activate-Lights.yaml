@@ -1,5 +1,5 @@
 blueprint:
-  name: Activate Lights, set colour and dimming
+  name: Activate lights, set colour and dimming
   domain: automation
   input:
     trigger:
