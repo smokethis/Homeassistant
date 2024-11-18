@@ -13,6 +13,6 @@ blueprint:
       name: Lights Config
       description: Select all lights to control with this automation
       selector:
-        entity:
-          filter:
+        target:
+          entity:
             domain: light
