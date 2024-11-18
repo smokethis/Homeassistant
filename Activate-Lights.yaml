@@ -1,4 +1,6 @@
 blueprint:
+  homeassistant:
+    min_version: 2024.6.0
   name: Activate lights, set colour and dimming
   domain: automation
   input:
