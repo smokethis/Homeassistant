@@ -28,8 +28,6 @@ blueprint:
     day_time:
       name: Set Day Time
       time:
-        default: 05:30:00
     night_time:
       name: Set Night Time
       time:
-        default: 20:30:00
