@@ -1,0 +1,93 @@
+blueprint:
+  name: Activate Lights, Colour and Dim
+  description: >
+    # 💡 Activate Lights, set colour temperature according to sun's position and set on level depending on time-of-day.
+    
+    **Version: 0.1**
+    
+    <details>
+    <summary><b>A summary:</b> Hi this is a thing</summary>
+      
+      - **Trigger:**
+        - Some words.
+        - Some more words.
+    </details>
+  domain: automation
+
+  input:
+    triggers:
+      name: "Trigger"
+      icon: mdi:cog-outline
+      input:
+          lights_on_trigger:
+          name: "Lights on trigger"
+          description: "Select entity(ies) to trigger this automation"
+          default: []
+          selector:
+            entity:
+              filter:
+                domain:
+                  - binary_sensor
+              multiple: true
+
+    lights_config:
+      input:
+        all_lights:
+          name: "All Lights"
+          description: "Select all lights to control with this automation"
+          icon: mdi:lightbulb-outline
+          default: []
+          selector:
+            target:
+              entity:
+                domain:
+                  - light
+      another:
+        night_lights:
+          name: "Night Light"
+          description: "Select light(s) to only activate at nighttime"
+          icon: mdi:lightbulb-night-outline
+          default: []
+          selector:
+            target:
+              entity:
+                domain:
+                  - light
+    nighttime_selection:
+      name: "Select Nighttime"
+      input:
+        nighttime_start:
+          name: "Nighttime start"
+          description: "Set time for nighttime to begin"
+          default: "20:30:00"
+          time:
+        nighttime_finish:
+          name: "Nighttime finish"
+          description: "Set time for nighttime to finish"
+          default: "05:30:00"
+          time:
+
+  actions:
+  - choose:
+      - conditions:
+          - condition: time
+            after: !input nighttime_start
+            before: !input nighttime_finish
+        sequence:
+          - action: light.turn_on
+            data:
+              transition: 2
+              brightness_pct: 5
+            target:
+              entity: !input night_lights
+      - conditions:
+          - condition: time
+            after: !input nighttime_start
+            before: !input nighttime_finish
+        sequence:
+          - action: light.turn_on
+            data:
+              transition: 2
+              brightness_pct: 100
+            target:
+              area_id: !input all_lights
