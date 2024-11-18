@@ -90,36 +90,36 @@ blueprint:
               max: 100
               mode: slider
 
-  triggers:
-    - trigger: state
-      entity_id: !input devices
+triggers:
+  - trigger: state
+    entity_id: !input devices
   
-  action:
-    - choose:
-      - conditions:
-          - condition: time
-            # Nighttime run condition
-            after: !input night_time
-            before: !input day_time
-        sequence:
-        - service: light.turn_on
-          data:
-            kelvin: !input min_colour_temp
-            transition: 5
-            brightness_pct: !input nighttime_brightness
-          target:
-            entity_id: !input night_lights
-      - conditions:
+action:
+  - choose:
+    - conditions:
         - condition: time
           # Nighttime run condition
-          after: !input day_time
-          before: !input night_time
-        sequence:
-        - service: light.turn_on
-          data:
-            kelvin: !input max_colour_temp
-            transition: 2
-            brightness_pct: !input daytime_brightness
-          target:
-            entity_id: !input day_lights
+          after: !input night_time
+          before: !input day_time
+      sequence:
+      - service: light.turn_on
+        data:
+          kelvin: !input min_colour_temp
+          transition: 5
+          brightness_pct: !input nighttime_brightness
+        target:
+          entity_id: !input night_lights
+    - conditions:
+      - condition: time
+        # Nighttime run condition
+        after: !input day_time
+        before: !input night_time
+      sequence:
+      - service: light.turn_on
+        data:
+          kelvin: !input max_colour_temp
+          transition: 2
+          brightness_pct: !input daytime_brightness
+        target:
+          entity_id: !input day_lights
 
